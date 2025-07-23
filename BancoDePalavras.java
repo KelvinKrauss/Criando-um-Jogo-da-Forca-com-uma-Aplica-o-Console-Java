@@ -1,4 +1,9 @@
-class BancoDePalavras {
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Arrays;
+
+public class BancoDePalavras {
     private List<String> palavras;
     private Random random;
     
@@ -8,18 +13,13 @@ class BancoDePalavras {
     }
     
     private void inicializarPalavras() {
-        palavras = Arrays.asList(
+        palavras = new ArrayList<>(Arrays.asList(
             "programacao", "computador", "algoritmo", "software", "hardware",
-            "internet", "tecnologia", "desenvolvimento", "aplicativo", "sistema",
+            "internet", "tecnologia", "desenvolvimento", "brksedu", "sistema",
             "codigo", "linguagem", "java", "python", "javascript",
-            "banco", "dados", "rede", "servidor", "cliente",
-            "interface", "usuario", "design", "web", "mobile",
-            "inteligencia", "artificial", "machine", "learning", "cloud",
-            "seguranca", "criptografia", "firewall", "antivirus", "backup",
-            "framework", "biblioteca", "funcao", "variavel", "objeto",
-            "classe", "heranca", "polimorfismo", "encapsulamento", "abstração",
-            "compilador", "interpretador", "debugger", "teste", "qualidade"
-        );
+            "banco", "dados", "abobora", "servidor", "PARALELEPIPEDO",
+            "orochinho", "usuario"
+        ));
     }
     
     public String obterPalavraAleatoria() {
@@ -37,4 +37,3 @@ class BancoDePalavras {
         return palavras.size();
     }
 }
-

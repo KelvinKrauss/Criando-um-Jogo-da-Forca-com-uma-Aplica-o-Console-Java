@@ -1,4 +1,4 @@
-class DesenhoForca {
+public class DesenhoForca {
     private String[] estagios;
     
     public DesenhoForca() {
@@ -15,7 +15,7 @@ class DesenhoForca {
             "   │      \n" +
             "   │      \n" +
             "───┴─────  ",
-
+            
             "   ┌─────┐\n" +
             "   │     │\n" +
             "   │     ○\n" +
@@ -23,7 +23,7 @@ class DesenhoForca {
             "   │      \n" +
             "   │      \n" +
             "───┴─────  ",
-
+            
             "   ┌─────┐\n" +
             "   │     │\n" +
             "   │     ○\n" +
@@ -31,7 +31,7 @@ class DesenhoForca {
             "   │      \n" +
             "   │      \n" +
             "───┴─────  ",
-
+            
             "   ┌─────┐\n" +
             "   │     │\n" +
             "   │     ○\n" +
@@ -39,7 +39,7 @@ class DesenhoForca {
             "   │      \n" +
             "   │      \n" +
             "───┴─────  ",
-
+            
             "   ┌─────┐\n" +
             "   │     │\n" +
             "   │     ○\n" +
@@ -47,7 +47,7 @@ class DesenhoForca {
             "   │      \n" +
             "   │      \n" +
             "───┴─────  ",
-
+            
             "   ┌─────┐\n" +
             "   │     │\n" +
             "   │     ○\n" +
@@ -58,7 +58,7 @@ class DesenhoForca {
             
             "   ┌─────┐\n" +
             "   │     │\n" +
-            "   │     ○\n" +
+            "   │     o\n" +
             "   │    ╱│╲\n" +
             "   │    ╱ ╲\n" +
             "   │      \n" +

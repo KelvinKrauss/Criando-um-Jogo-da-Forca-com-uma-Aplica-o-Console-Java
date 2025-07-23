@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Forca {
+public class Forca {
     private String palavraSecreta;
     private StringBuilder palavraOculta;
     private Set<Character> letrasUsadas;
@@ -34,6 +34,7 @@ class Forca {
         
         letrasUsadas.add(letra);
         
+
         if (palavraSecreta.contains(String.valueOf(letra))) {
             revelarLetra(letra);
             return ResultadoJogada.LETRA_CORRETA;
@@ -46,7 +47,7 @@ class Forca {
     private void revelarLetra(char letra) {
         for (int i = 0; i < palavraSecreta.length(); i++) {
             if (palavraSecreta.charAt(i) == letra) {
-                palavraOculta.setCharAt(i * 2, letra); 
+                palavraOculta.setCharAt(i * 2, letra);
             }
         }
     }

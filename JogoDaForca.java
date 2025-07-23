@@ -1,4 +1,10 @@
-import java.util.Scanner;
+import java.util.*;
+
+enum ResultadoJogada {
+    LETRA_CORRETA,
+    LETRA_INCORRETA,
+    LETRA_JA_USADA
+}
 
 public class JogoDaForca {
     private Scanner scanner;
@@ -25,8 +31,8 @@ public class JogoDaForca {
     
     private void exibirBoasVindas() {
         System.out.println("╔════════════════════════════════════╗");
-        System.out.println("║         BEM-VINDO AO JOGO          ║");
-        System.out.println("║            DA FORCA!               ║");
+        System.out.println("║              Bem vindo!            ║");
+        System.out.println("║          Jogo da Forca Java        ║");
         System.out.println("╚════════════════════════════════════╝");
         System.out.println();
     }
@@ -56,7 +62,7 @@ public class JogoDaForca {
         String entrada = scanner.nextLine().toLowerCase().trim();
         
         if (entrada.length() != 1 || !Character.isLetter(entrada.charAt(0))) {
-            System.out.println("❌ Por favor, digite apenas uma letra válida!");
+            System.out.println(" digite apenas uma letra válida!");
             return;
         }
         
@@ -65,13 +71,13 @@ public class JogoDaForca {
         
         switch (resultado) {
             case LETRA_CORRETA:
-                System.out.println("✅ Boa! A letra '" + letra + "' está na palavra!");
+                System.out.println("A letra '" + letra + "' está na palavra!");
                 break;
             case LETRA_INCORRETA:
-                System.out.println("❌ A letra '" + letra + "' não está na palavra.");
+                System.out.println("A letra '" + letra + "' não está na palavra.");
                 break;
             case LETRA_JA_USADA:
-                System.out.println("⚠️ Você já tentou a letra '" + letra + "'!");
+                System.out.println("Você já tentou a letra '" + letra + "'!");
                 break;
         }
     }
@@ -82,10 +88,10 @@ public class JogoDaForca {
         System.out.println();
         
         if (forca.isVitoria()) {
-            System.out.println("🎉 PARABÉNS! VOCÊ VENCEU! 🎉");
+            System.out.println("ganho");
             System.out.println("A palavra era: " + forca.getPalavraSecreta().toUpperCase());
         } else {
-            System.out.println("💀 GAME OVER! VOCÊ PERDEU! 💀");
+            System.out.println(" Its over...");
             System.out.println("A palavra era: " + forca.getPalavraSecreta().toUpperCase());
         }
         System.out.println("=".repeat(50));
@@ -98,21 +104,14 @@ public class JogoDaForca {
     }
     
     private void exibirDespedida() {
-        System.out.println("\n╔════════════════════════════════════╗");
-        System.out.println("║        OBRIGADO POR JOGAR!         ║");
-        System.out.println("║         ATÉ A PRÓXIMA! 👋          ║");
-        System.out.println("╚════════════════════════════════════╝");
+        System.out.println("\n╔══════════════════════════════════════╗");
+        System.out.println("  ║        obrigado por jogar            ║");
+        System.out.println("  ║                                      ║");
+        System.out.println("  ╚══════════════════════════════════════╝");
     }
     
     public static void main(String[] args) {
         JogoDaForca jogo = new JogoDaForca();
         jogo.iniciar();
     }
-}
-
-// Enumeração para os resultados das jogadas
-enum ResultadoJogada {
-    LETRA_CORRETA,
-    LETRA_INCORRETA,
-    LETRA_JA_USADA
 }
